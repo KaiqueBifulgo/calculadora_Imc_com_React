@@ -1,0 +1,6 @@
+.container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #432e2e;
+  padding: 2rem;
+}
