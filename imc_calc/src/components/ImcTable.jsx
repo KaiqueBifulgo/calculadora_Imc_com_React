@@ -1,12 +1,14 @@
+import './ImcTable.css'
+
 import Button from './Button.jsx'
 
 import propTypes from "prop-types"
 
-function ImcTable({data}) {
+function ImcTable({data, imc, info, infoClass, resetCalc}) {
   return (
     <div id="result-container">
-      <p id="imc-number">Seu imc é:</p>
-      <p id="info-imc">Sua situação:</p>
+      <p id="imc-number">Seu imc é: <span className={infoClass}> {imc} </span></p>
+      <p id="info-imc">Sua situação: <span className={infoClass}> {info} </span></p>
       <h3>Confira as classificações de imc:</h3>
       <div id="imc-table">
         <div className="table-header">
@@ -22,13 +24,17 @@ function ImcTable({data}) {
           </div>
         ))}
       </div>
-      <Button id="back-btn" text="Voltar pagina" />
+      <Button id="back-btn" text="Voltar pagina" action={resetCalc}/>
     </div>
   )
 }
 
 ImcTable.propTypes = {
-  data: propTypes.data
+  data: propTypes.func,
+  imc: propTypes.func,
+  info: propTypes.func,
+  infoClass: propTypes.string,
+  resetCalc: propTypes.func
 }
 
 export default ImcTable

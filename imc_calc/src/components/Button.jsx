@@ -16,7 +16,7 @@ const Button = ({id, text, action}) => {
 Button.propTypes = {
     id: propTypes.string,
     text: propTypes.string,
-    action: propTypes.action
+    action: propTypes.func
 }
 
 
