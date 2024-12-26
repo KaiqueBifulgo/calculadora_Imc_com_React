@@ -14,8 +14,8 @@ function App() {
 
     if(!weight || !height) return;
 
-    const weightFloat = +weight.replace(".", ",");
-    const heightFloat = +height.replace(".", ",");
+    const weightFloat = +weight.replace(",", ".");
+    const heightFloat = +height.replace(",", ".");
 
     const resultImc = (weightFloat / (heightFloat * heightFloat)).toFixed(1);
 

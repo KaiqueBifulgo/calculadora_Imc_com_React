@@ -30,9 +30,9 @@ function ImcTable({data, imc, info, infoClass, resetCalc}) {
 }
 
 ImcTable.propTypes = {
-  data: propTypes.func,
-  imc: propTypes.func,
-  info: propTypes.func,
+  data: propTypes.array,
+  imc: propTypes.string,
+  info: propTypes.string,
   infoClass: propTypes.string,
   resetCalc: propTypes.func
 }
